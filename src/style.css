@@ -58,3 +58,8 @@ hr {
   margin: 0 auto;
   display: block;
 }
+
+.source-code {
+  font-family: "Libre Baskerville", serif;
+  font-size: 10px;
+}
