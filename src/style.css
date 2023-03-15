@@ -49,9 +49,15 @@ h3 {
   border-color: rgb(228, 225, 222);
 }
 
-.btn btn-success {
-  margin: 0 auto;
+.btn.btn-success {
+  margin: 20px auto;
   border-radius: 10px;
+}
+.unit {
+  display: inline-block;
+  font-weight: bold;
+  position: relative;
+  top: -10px;
 }
 hr {
   width: 50%;
