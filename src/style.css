@@ -23,9 +23,13 @@ h3 {
 .unit {
   display: inline-block;
   font-weight: bold;
+  font-size: 12px;
+  color: rgb(134, 133, 133);
 }
 #temperature {
   display: inline-block;
+  font-size: 22px;
+  color: black;
 }
 .weather {
   font-size: 15px;
