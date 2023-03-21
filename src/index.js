@@ -27,6 +27,8 @@ function displayWeather(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  let weather = document.querySelector("#weather-description");
+  weather.innerHTML = response.data.weather[0].description;
 }
 function searchLocation(position) {
   let apiKey = "35b7b3764c67d150d7f0fed207b2041b";
@@ -50,6 +52,7 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 let cityElement = document.querySelector("#city");
 let searchForm = document.querySelector("#search-form");
+let iconElement = document.querySelector("#icon");
 
 searchForm.addEventListener("submit", search);
 

@@ -19,6 +19,7 @@ h3 {
   font-size: 12px;
   color: rgb(134, 133, 133);
   margin: 0 auto;
+  text-transform: capitalize;
 }
 .unit {
   display: inline-block;
@@ -35,6 +36,7 @@ h3 {
   font-size: 15px;
   margin: 0 auto;
   color: black;
+  text-transform: capitalize;
 }
 #date {
   font-size: 16px;
