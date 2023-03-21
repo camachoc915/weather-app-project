@@ -58,10 +58,9 @@ searchForm.addEventListener("submit", search);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
 cityElement.innerHTML = "San Diego";
 dateElement.innerHTML = formatDate(currentTime);
-iconElement.setAttribute(
+icon.ELement.setAttribute(
   "src",
   `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 );
