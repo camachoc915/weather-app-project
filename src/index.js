@@ -29,6 +29,12 @@ function displayWeather(response) {
   );
   let weather = document.querySelector("#weather-description");
   weather.innerHTML = response.data.weather[0].description;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function searchLocation(position) {
   let apiKey = "35b7b3764c67d150d7f0fed207b2041b";
@@ -52,7 +58,6 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 let cityElement = document.querySelector("#city");
 let searchForm = document.querySelector("#search-form");
-let iconElement = document.querySelector("#icon");
 
 searchForm.addEventListener("submit", search);
 
@@ -60,7 +65,3 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 cityElement.innerHTML = "San Diego";
 dateElement.innerHTML = formatDate(currentTime);
-icon.ELement.setAttribute(
-  "src",
-  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-);
