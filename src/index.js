@@ -35,6 +35,8 @@ function displayWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  celsiusTemperature = response.data.main.temp;
 }
 function searchLocation(position) {
   let apiKey = "35b7b3764c67d150d7f0fed207b2041b";
@@ -54,14 +56,27 @@ function search(event) {
   axios.get(apiUrl).then(displayWeather);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 let cityElement = document.querySelector("#city");
-let searchForm = document.querySelector("#search-form");
 
+let celsiusTemperature = null;
+
+let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 cityElement.innerHTML = "San Diego";
 dateElement.innerHTML = formatDate(currentTime);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+search("San Diego");
