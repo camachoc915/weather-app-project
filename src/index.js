@@ -35,8 +35,6 @@ function displayWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  celsiusTemperature = response.data.main.temp;
 }
 function searchLocation(position) {
   let apiKey = "35b7b3764c67d150d7f0fed207b2041b";
@@ -60,14 +58,18 @@ function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let fahrenheitTemperature = (14 * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+let celsiusTemperature = null;
+
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 let cityElement = document.querySelector("#city");
-
-let celsiusTemperature = null;
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
@@ -78,5 +80,8 @@ dateElement.innerHTML = formatDate(currentTime);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("San Diego");
