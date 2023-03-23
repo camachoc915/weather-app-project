@@ -35,6 +35,8 @@ function displayWeather(response) {
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  let speedElement = document.querySelector("#speed");
+  speed.innerHTML = Math.round(response.data.wind.speed);
 }
 function searchLocation(position) {
   let apiKey = "35b7b3764c67d150d7f0fed207b2041b";
