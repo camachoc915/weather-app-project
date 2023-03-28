@@ -39,7 +39,7 @@ function displayWeather(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
   let speedElement = document.querySelector("#speed");
-  speed.innerHTML = Math.round(response.data.wind.speed);
+  speed.innerHTML = response.data.wind.speed;
 }
 function searchLocation(position) {
   let apiKey = "35b7b3764c67d150d7f0fed207b2041b";
