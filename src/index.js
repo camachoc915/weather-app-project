@@ -27,6 +27,9 @@ function displayWeather(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+  celsiusTemperature = Math.round(response.data.main.temp);
+  document.querySelector("#temperature").innerHTML = celsiusTemperature;
+
   let weather = document.querySelector("#weather-description");
   weather.innerHTML = response.data.weather[0].description;
   let iconElement = document.querySelector("#icon");
