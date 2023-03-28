@@ -80,3 +80,6 @@ hr {
   font-family: "Libre Baskerville", serif;
   font-size: 10px;
 }
+.small mb-1 {
+  opacity: 60%;
+}
