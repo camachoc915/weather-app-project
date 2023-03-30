@@ -9,6 +9,7 @@ img {
 h1 {
   font-size: 20px;
   margin-bottom: 0;
+  font-weight: bold;
 }
 h2 {
   margin: 0 auto;
@@ -37,9 +38,11 @@ h3 {
   margin: 0 auto;
   color: black;
   text-transform: capitalize;
+  opacity: 0.7;
 }
 #date {
-  font-size: 16px;
+  font-size: 15px;
+  opacity: 0.7;
 }
 .control-submit {
   background-color: rgb(248, 156, 43);
@@ -80,6 +83,6 @@ hr {
   font-family: "Libre Baskerville", serif;
   font-size: 10px;
 }
-.small mb-1 {
-  opacity: 60%;
+#speed {
+  color: #03a9f4;
 }

@@ -61,7 +61,7 @@ function search(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (14 * 9) / 5 + 32;
+  let fahrenheitTemperature = celsiusTemperature * (9 / 5) + 32;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
