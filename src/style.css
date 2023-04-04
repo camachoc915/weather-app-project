@@ -1,5 +1,7 @@
 .container {
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 img {
   width: 15%;
@@ -7,20 +9,25 @@ img {
   margin: 0 auto;
 }
 h1 {
-  font-size: 20px;
+  font-size: 35px;
   margin-bottom: 0;
   font-weight: bold;
+  color: #004444;
 }
 h2 {
   margin: 0 auto;
   padding: 10px 0px;
-  font-size: 10px;
+  font-size: 20px;
 }
 h3 {
   font-size: 12px;
   color: rgb(134, 133, 133);
   margin: 0 auto;
   text-transform: capitalize;
+}
+
+body {
+  background-color: #fcf9f1;
 }
 .unit {
   display: inline-block;
@@ -31,7 +38,7 @@ h3 {
 #temperature {
   display: inline-block;
   font-size: 22px;
-  color: black;
+  color: #004444;
 }
 .weather {
   font-size: 15px;
@@ -41,7 +48,7 @@ h3 {
   opacity: 0.7;
 }
 #date {
-  font-size: 15px;
+  font-size: 20px;
   opacity: 0.7;
 }
 .control-submit {
@@ -80,7 +87,7 @@ hr {
 }
 
 .source-code {
-  font-family: "Libre Baskerville", serif;
+  font-family: sans-serif;
   font-size: 10px;
 }
 #speed {
